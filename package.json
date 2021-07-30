@@ -1,0 +1,39 @@
+{
+  "name": "redux-store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "cd server && npm start",
+    "start:dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "seed": "cd server && npm run seed",
+    "heroku-postbuild": "cd client && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AyomideAwonaya21/redux-store.git"
+  },
+  "author": "Ayomide Awonaya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AyomideAwonaya21/redux-store/issues"
+  },
+  "homepage": "https://github.com/AyomideAwonaya21/redux-store#readme",
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.6.1",
+    "apollo-server-express": "^2.25.2",
+    "bcrypt": "^5.0.1",
+    "concurrently": "^6.2.0",
+    "express": "^4.17.1",
+    "graphql": "^15.5.1",
+    "if-env": "^1.0.4",
+    "jsonwebtoken": "^8.5.1",
+    "nodemon": "^2.0.12",
+    "react-redux": "^4.4.10",
+    "redux": "^2.0.0",
+    "redux-devtools": "^3.7.0",
+    "stripe": "^8.167.0"
+  }
+}
